@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run: |
           echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
-          docker build -t ikanag0/concat_pdf:latest
+          docker build -t ikanag0/concat_pdf:latest .
           docker push ikanag0/concat_pdf:latest
 
 workflows:
