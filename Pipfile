@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 pypdf2 = "*"
+click = "*"
 
 [requires]
 python_version = "3.8"
