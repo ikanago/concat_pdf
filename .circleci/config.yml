@@ -1,0 +1,16 @@
+version: 2.1
+
+jobs:
+  build-and-push:
+    machine: true
+    steps:
+      - checkout
+      - run: |
+          echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+          docker build -t ikanag0/concat_pdf:latest
+          docker push ikanag0/concat_pdf:latest
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
