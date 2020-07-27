@@ -4,10 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+autopep8 = "*"
+pylint = "*"
 
 [packages]
 pypdf2 = "*"
 click = "*"
+natsort = "*"
 
 [requires]
 python_version = "3.8"
+
+[scripts]
+format = "autopep8 -ivr ."
