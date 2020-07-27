@@ -39,6 +39,7 @@ def sort_files(directory: str) -> List[str]:
 @click.option("-o", "--output", type=click.Path(), default="output.pdf", help="Output file name")
 def cmd(directory, output):
     concat_pdf(directory, output)
+    print("Successfully concatenated.")
 
 
 def main():
