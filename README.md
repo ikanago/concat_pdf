@@ -23,7 +23,7 @@ img001.pdf  imag002.pdf  ... img010.img  img011.img
 3. Run following command
 
 ```
-$ docker run --rm -v "`pwd`:/app" ikanag0/concat_pdf:latest files
+$ docker run --rm -v "`pwd`:/data" ikanag0/concat_pdf:latest files
 $ ls
 files  output.pdf
 ```
@@ -34,4 +34,4 @@ You can change an output file name with `-o` option.
 
 You can set an alias to this command.
 ```
-alias concat_pdf='docker run --rm -v "`pwd`:/app" ikanag0/concat_pdf:latest'
+alias concat_pdf='docker run --rm -v "`pwd`:/data" ikanag0/concat_pdf:latest'
